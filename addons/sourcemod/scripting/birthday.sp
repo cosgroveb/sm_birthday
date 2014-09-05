@@ -29,14 +29,10 @@ public Action:Event_WeaponFireRespondToTaser(Handle:event, const String:name[], 
    {
      new attackerUserId = GetEventInt(event, "userid")
      new attackerClient = GetClientOfUserId(attackerUserId)
-     decl String:name[64]
-     GetClientName(attackerClient, name, sizeof(name))
 
      decl Float:attackerOriginVec[3]
      GetClientAbsOrigin(attackerClient, attackerOriginVec)
 
      EmitAmbientSound("weapons/party_horn_01.wav", attackerOriginVec)
-
-     PrintToServer("%s fired their %s. It's a party!!", name, weapon)
    }
 }
