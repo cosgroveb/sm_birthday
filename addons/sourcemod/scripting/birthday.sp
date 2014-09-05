@@ -10,7 +10,7 @@ public Plugin:myinfo =
   url = "https://github.com/cosgroveb/csgo_birthday/"
 };
 
-public OnPluginStart()                     
+public OnPluginStart()
 {
   HookEvent("weapon_fire", Event_WeaponFireRespondToTaser, EventHookMode_Post)
 }
